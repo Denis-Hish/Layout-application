@@ -1,0 +1,36 @@
+.search {
+  position: relative;
+  width: 500px;
+  margin: 0 10px;
+
+  input {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 6px 20px 6px 35px;
+    font-size: 1.125rem;
+    outline: none;
+    border: 1px solid $google-border-color;
+    background: $bg-color-light;
+    transition: $sec;
+
+    &:focus {
+      border: 1px solid $blue-light;
+      box-shadow: $shadow-button;
+    }
+
+    &::placeholder {
+      font-size: 0.875em;
+      text-align: center;
+    }
+  }
+
+  i {
+    position: absolute;
+    left: 15px;
+    top: 30%;
+    font-size: 1.2em;
+    color: $black-2;
+  }
+}

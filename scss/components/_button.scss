@@ -1,0 +1,48 @@
+.buttons-container {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+
+  .button {
+    width: 100%;
+  }
+}
+
+.button {
+  display: block;
+  padding: 8px 32px;
+  background-color: transparent;
+  border: 2px solid $blue-light;
+  color: $text-color-light;
+  letter-spacing: 0.75px;
+  font-weight: 600;
+  border-radius: 40px;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  transition: background-color $sec, box-shadow $sec, color $sec;
+  cursor: pointer;
+
+  i {
+    margin-right: 6px;
+    color: $blue-light;
+    transition: $sec;
+  }
+
+  &:hover {
+    background-color: $blue-light;
+    color: $text-color-dark;
+    box-shadow: $shadow-button;
+
+    i {
+      color: $bg-color-light;
+    }
+  }
+
+  &:active {
+    translate: 0 1px;
+    box-shadow: none;
+  }
+}
