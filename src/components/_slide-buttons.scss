@@ -1,0 +1,88 @@
+.slide-buttons {
+  $height: 40px;
+
+  position: fixed;
+  top: 150px;
+  right: 0;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1;
+
+  .slide-button {
+    position: relative;
+    left: calc(100% - $height);
+    display: flex;
+    background: $white;
+    border: 2px solid $blue-light;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+    transition: left $sec, transform $sec, box-shadow $sec;
+
+    .icon,
+    .title {
+      display: block;
+      align-items: center;
+      line-height: calc($height + 4px);
+    }
+
+    .icon {
+      min-width: $height;
+      height: $height;
+      text-align: center;
+    }
+
+    .title {
+      padding: 0 20px 0 10px;
+      height: $height;
+      white-space: nowrap;
+      color: $text-color-light;
+    }
+
+    .icon {
+      i {
+        color: $blue-light;
+        transition: color $sec;
+      }
+    }
+
+    &:hover {
+      transform: translateX(calc(-100% + $height));
+      box-shadow: $shadow-button;
+
+      .icon.edit i {
+        color: $green;
+      }
+
+      .icon.delete i {
+        color: $red;
+      }
+    }
+
+    &:active {
+      border: 2px solid lighten($blue-light, 20%);
+      border-right: none;
+    }
+  }
+}
+
+body.dark {
+  .slide-buttons {
+    .slide-button {
+      background: $bg-color-dark;
+      border: 2px solid $blue-dark;
+      border-right: none;
+      .title {
+        color: $white;
+      }
+      i {
+        color: $blue-dark;
+      }
+      &:active {
+        border: 2px solid lighten($blue-light, 20%);
+        border-right: none;
+      }
+    }
+  }
+}

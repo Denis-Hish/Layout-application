@@ -11,15 +11,15 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-color: $bg-color-light;
-    border-radius: $google-border-radius;
+    background-color: $white;
+    border-radius: $rounding;
     box-shadow: $shadow-card;
     transition: background-color $sec, color $sec;
     overflow: hidden;
 
     .card-header {
       background: $blue-light;
-      color: $bg-color-light;
+      color: $white;
       padding: 10px 0;
 
       .title {
@@ -35,6 +35,7 @@
         margin-bottom: 16px;
         padding-bottom: 8px;
         border-bottom: 1px solid transparent;
+        transition: border-bottom $sec;
 
         a {
           display: flex;
@@ -52,7 +53,7 @@
         }
 
         &:hover {
-          border-bottom: 1px solid $google-border-color;
+          border-bottom: 1px solid $border-color;
         }
 
         .document-details {
@@ -74,7 +75,7 @@
           .token {
             padding: 0 16px;
             border-radius: 50px;
-            color: $bg-color-light;
+            color: $white;
             background-color: $blue-light;
           }
         }
@@ -84,10 +85,37 @@
         display: inline-block;
         width: 100%;
         text-align: center;
-        color: $red-light;
+        color: $red;
 
         &.hidden {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+body.dark {
+  .card-box {
+    .card-box__card {
+      background-color: $bg-color-dark;
+      .card-header {
+        background: $blue-dark;
+        color: $white;
+      }
+      .card-body {
+        li {
+          .document-details {
+            small {
+              color: $white;
+            }
+          }
+          .document-date {
+            .token {
+              color: $white;
+              background-color: $blue-dark;
+            }
+          }
         }
       }
     }

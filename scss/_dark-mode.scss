@@ -1,32 +1,33 @@
 body.dark {
   background-color: $bg-color-dark;
-  color: $text-color-dark;
+  color: $white;
 
-  .button {
-    border: 2px solid $blue-dark;
-    color: $text-color-dark;
+  &::-webkit-scrollbar-track {
+    background: $bg-color-dark; /* цвет зоны отслеживания */
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $blue-dark; /* цвет бегунка */
+  }
 
-    &:hover {
-      background-color: $blue-dark;
-      color: $text-color-dark;
-    }
+  caret-color: $blue-light; /* цвет курсора */
+
+  ::selection {
+    background: $blue-light; /* цвет выделения текст */
   }
 
   .navigation {
     background: $blue-dark;
     border-left: 10px solid $blue-dark;
-
     ul {
       li {
         &:hover,
         &.hovered {
           background: $bg-color-dark;
           a {
-            color: $text-color-dark;
+            color: $white;
             &::before {
               box-shadow: 35px 35px 0 10px $bg-color-dark;
             }
-
             &::after {
               box-shadow: 35px -35px 0 10px $bg-color-dark;
             }
@@ -36,46 +37,7 @@ body.dark {
     }
   }
 
-  .container-layout {
-    .main {
-      .topbar {
-        .search {
-          input {
-            background: $bg-color-dark;
-            &:focus {
-              border: 1px solid $blue-dark;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .card-box {
-    .card-box__card {
-      background-color: $bg-color-dark;
-
-      .card-header {
-        background: $blue-dark;
-        color: $text-color-dark;
-      }
-
-      .card-body {
-        li {
-          .document-details {
-            small {
-              color: $text-color-dark;
-            }
-          }
-
-          .document-date {
-            .token {
-              color: $text-color-dark;
-              background-color: $blue-dark;
-            }
-          }
-        }
-      }
-    }
+  .container-layout .main .topbar {
+    background: $bg-color-dark;
   }
 }

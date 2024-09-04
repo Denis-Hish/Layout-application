@@ -1,0 +1,35 @@
+body {
+  .text-light {
+    color: $text-color-light;
+  }
+
+  .text-blue-light {
+    color: $blue-light;
+  }
+
+  .bg-light {
+    background: $white;
+  }
+
+  .bg-blue-light {
+    background: $blue-light;
+  }
+
+  &:active {
+    .text-dark {
+      color: $white;
+    }
+
+    .text-blue-dark {
+      color: $blue-dark;
+    }
+
+    .bg-dark {
+      background: $bg-color-dark;
+    }
+
+    .bg-blue-dark {
+      background: $blue-dark;
+    }
+  }
+}

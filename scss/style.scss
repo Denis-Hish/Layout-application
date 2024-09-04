@@ -12,8 +12,58 @@ body {
     sans-serif;
   min-height: 100dvh;
   overflow-x: hidden;
-  background-color: $bg-color-light;
+  background-color: $white;
   color: $text-color-light;
+
+  &::-webkit-scrollbar {
+    width: 8px; /* ширина всей полосы прокрутки */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $white; /* цвет зоны отслеживания */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $blue-light; /* цвет бегунка */
+    border-radius: 50px; /* округлось бегунка */
+    // border: 2px solid orange; /* отступ вокруг бегунка */
+  }
+
+  caret-color: $blue-dark; /* цвет курсора */
+
+  ::selection {
+    background: $blue-dark;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $blue-light;
+  transition: color $sec;
+
+  &:hover {
+    color: darken($blue-light, 10%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lora', serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+select {
+  outline: none;
 }
 
 .container-layout {
@@ -22,31 +72,6 @@ body {
 
   position: relative;
   width: 100%;
-
-  a {
-    text-decoration: none;
-    color: $blue-light;
-    transition: color $sec;
-
-    &:hover {
-      color: darken($blue-light, 10%);
-    }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Lora', serif;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  li {
-    list-style: none;
-  }
 
   .button {
     margin: auto; //! DELETE !
@@ -148,10 +173,10 @@ body {
 
         &:hover,
         &.hovered {
-          background: $bg-color-light;
+          background: $white;
 
           a {
-            color: $blue;
+            color: $blue-light;
 
             //* curve outside *//
             &::before,
@@ -168,12 +193,12 @@ body {
 
             &::before {
               top: -50px;
-              box-shadow: 35px 35px 0 10px $bg-color-light;
+              box-shadow: 35px 35px 0 10px $white;
             }
 
             &::after {
               bottom: -50px;
-              box-shadow: 35px -35px 0 10px $bg-color-light;
+              box-shadow: 35px -35px 0 10px $white;
             }
           }
         }
@@ -190,7 +215,7 @@ body {
       //   // margin-top: 2rem;
       //   padding-left: 70px;
       //   color: $white;
-      //   // border-bottom: 1px solid $google-border-color;
+      //   // border-bottom: 1px solid $border-color;
       //   // border-radius: 50px 0 0 50px;
       // }
     }
@@ -219,11 +244,11 @@ body {
           }
 
           &:hover {
-            border: 1px solid $google-border-color;
+            border: 1px solid $border-color;
           }
 
           &:active {
-            border: 1px solid lighten($blue, 20%);
+            border: 1px solid lighten($blue-light, 20%);
           }
         }
       }
@@ -242,11 +267,11 @@ body {
         }
 
         &:hover {
-          border: 1px solid $google-border-color;
+          border: 1px solid $border-color;
         }
 
         &:active {
-          border: 1px solid lighten($blue, 20%);
+          border: 1px solid lighten($blue-light, 20%);
         }
       }
 
@@ -314,6 +339,15 @@ body {
       align-items: center;
       padding: 0 10px;
 
+      // box-shadow: $shadow-card;
+      border-bottom: 1px solid $border-color;
+      margin-bottom: 1rem;
+      position: sticky;
+      top: 0;
+      left: 0;
+      background: $white;
+      z-index: 2;
+
       .toggle,
       .user {
         flex: 0.5;
@@ -327,7 +361,10 @@ body {
         justify-content: start;
         align-items: center;
         font-size: 1.875em;
-        cursor: pointer;
+
+        i {
+          cursor: pointer;
+        }
       }
 
       .user {
@@ -356,11 +393,7 @@ body {
     }
 
     .footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      left: 50%;
-      transform: translateX(-50%);
+      position: relative;
 
       .copyright {
         padding: 4px;
@@ -377,7 +410,7 @@ body {
         transform: translateX(-50%);
         width: 50%;
         height: 1px;
-        background-color: $google-border-color;
+        background-color: $border-color;
       }
     }
 
@@ -390,6 +423,10 @@ body {
       h2 {
         padding: 2rem; //! DELETE !
       }
+    }
+
+    #table_wrapper {
+      margin: 50px 0;
     }
   }
 }

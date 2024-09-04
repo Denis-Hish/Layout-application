@@ -1,8 +1,12 @@
 @import 'fonts';
 @import 'variables';
 @import 'dark-mode';
-@import 'components/button';
-@import 'components/cards';
-@import 'components/search';
+@import '../src/components/button';
+@import '../src/components/cards';
+@import '../src/components/search';
+@import '../src/components/breadcrumb';
+@import '../src/components/table/table';
+@import '../src/components/slide-buttons';
+@import '../src/components/tabs-widget';
 
 @import 'media-queries';

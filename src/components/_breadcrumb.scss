@@ -1,0 +1,127 @@
+#breadcrumb {
+  $height: 26px;
+  $half: $height / 2;
+
+  padding-left: 3rem;
+
+  li {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    height: $height;
+    line-height: $height;
+    padding: 0 $height;
+    background-color: $blue-light;
+
+    a {
+      color: $white;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+
+    & + li {
+      margin-left: 2px;
+
+      &:before {
+        left: 0;
+        top: 0;
+        border-top: $half solid transparent;
+        border-left: $half solid $white;
+        border-bottom: $half solid transparent;
+      }
+    }
+
+    &:first-child {
+      border-radius: $half 0 0 $half;
+    }
+
+    &:last-child {
+      border-radius: 0 $half $half 0;
+
+      a {
+        cursor: default;
+      }
+    }
+
+    &:not(:last-child) {
+      padding-right: $half;
+
+      &:after {
+        z-index: 1;
+        right: -$half;
+        bottom: 0;
+        border-top: $half solid transparent;
+        border-bottom: $half solid transparent;
+        border-left: $half solid $blue-light;
+      }
+    }
+
+    &:has(a:hover):not(:last-child) {
+      background-color: lighten($blue-light, 8%);
+
+      &:after {
+        border-left-color: lighten($blue-light, 8%);
+      }
+    }
+
+    &:has(a:active):not(:last-child) {
+      background-color: lighten($blue-light, 12%);
+
+      &:after {
+        border-left-color: lighten($blue-light, 12%);
+      }
+    }
+
+    &:has(a:active):not(:last-child) a {
+      display: block;
+      translate: 0 1px;
+    }
+  }
+}
+
+body.dark {
+  #breadcrumb {
+    $height: 26px;
+    $half: $height / 2;
+
+    li {
+      background-color: $blue-dark;
+      a {
+        color: $white;
+      }
+      & + li {
+        &:before {
+          border-top: $half solid transparent;
+          border-left: $half solid $bg-color-dark;
+          border-bottom: $half solid transparent;
+        }
+      }
+      &:not(:last-child) {
+        &:after {
+          border-top: $half solid transparent;
+          border-bottom: $half solid transparent;
+          border-left: $half solid $blue-dark;
+        }
+      }
+      &:has(a:hover):not(:last-child) {
+        background-color: lighten($blue-dark, 10%);
+        &:after {
+          border-left-color: lighten($blue-dark, 10%);
+        }
+      }
+      &:has(a:active):not(:last-child) {
+        background-color: lighten($blue-light, 2%);
+
+        &:after {
+          border-left-color: lighten($blue-light, 2%);
+        }
+      }
+    }
+  }
+}

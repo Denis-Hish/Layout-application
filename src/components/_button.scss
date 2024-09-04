@@ -11,8 +11,10 @@
   }
 }
 
+a.button,
 .button {
   display: block;
+  width: fit-content;
   padding: 8px 32px;
   background-color: transparent;
   border: 2px solid $blue-light;
@@ -33,16 +35,35 @@
 
   &:hover {
     background-color: $blue-light;
-    color: $text-color-dark;
+    color: $white;
     box-shadow: $shadow-button;
 
     i {
-      color: $bg-color-light;
+      color: $white;
     }
   }
 
   &:active {
     translate: 0 1px;
     box-shadow: none;
+  }
+}
+
+body.dark {
+  a.button,
+  .button {
+    border: 2px solid $blue-dark;
+    color: $white;
+    i {
+      color: $blue-dark;
+    }
+    &:hover {
+      background-color: $blue-dark;
+      color: $white;
+
+      i {
+        color: $white;
+      }
+    }
   }
 }

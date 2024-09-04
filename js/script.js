@@ -1,5 +1,10 @@
+import { initialDataTable } from '../src/components/table/table.js';
+
+// Initial DataTables
+initialDataTable();
+
 // add hovered class in selected list item
-const list = document.querySelectorAll('.container-layout nav ul li');
+const list = document.querySelectorAll('.container-layout .navigation ul li');
 
 function activeLink() {
   list.forEach(item => item.classList.remove('hovered'));
@@ -10,7 +15,7 @@ list.forEach(item => item.addEventListener('mouseenter', activeLink));
 // ------------------------------------------------------------ //
 
 // menu toggle
-const menuToggle = document.querySelector('.topbar .toggle');
+const menuToggle = document.querySelector('.topbar .toggle i');
 const navigation = document.querySelector('.navigation');
 const main = document.querySelector('.main');
 
@@ -65,4 +70,12 @@ if (savedTheme) {
     localStorage.setItem('theme', 'light');
   }
 }
+// ------------------------------------------------------------ //
+
+//! Prevention of link behavior when pressing (!!! DELETE THIS !!!)
+document.querySelectorAll('a[href="#"]').forEach(link => {
+  link.addEventListener('click', function (event) {
+    event.preventDefault();
+  });
+});
 // ------------------------------------------------------------ //
