@@ -1,13 +1,13 @@
 @import 'fonts';
 @import 'variables';
 @import 'dark-mode';
-@import '../src/components/button';
-@import '../src/components/cards';
-@import '../src/components/search';
-@import '../src/components/breadcrumb';
-@import '../src/components/table/table';
-@import '../src/components/slide-buttons';
-@import '../src/components/tabs-widget';
-@import '../src/components/allertify';
+@import 'components/button';
+@import 'components/cards';
+@import 'components/search';
+@import 'components/breadcrumb';
+@import 'components/table';
+@import 'components/slide-buttons';
+@import 'components/tabs-widget';
+@import 'components/allertify';
 
 @import 'media-queries';

@@ -1,6 +1,6 @@
 'use strict';
 
-import { InitialDataTable } from '../src/components/table/table.js';
+import { InitialDataTable } from './table.js';
 import { Allertify } from './allertify.js';
 
 // Initial DataTables
