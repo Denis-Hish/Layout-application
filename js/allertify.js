@@ -8,7 +8,7 @@
 */
 
 export function Allertify() {
-  const timeShow = 50; // 5s default
+  const timeShow = 500; // 5s default
   document
     .getElementById('allerty-success')
     .addEventListener('click', function () {

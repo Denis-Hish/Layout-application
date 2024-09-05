@@ -886,6 +886,7 @@ body.dark .tabs-widget .tabs::after {
   background: #f3f4f8 !important;
   border-style: solid;
   border-width: 2px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .alertify-notifier .ajs-message.ajs-message {
   border-color: #37a1f2;
@@ -897,6 +898,23 @@ body.dark .tabs-widget .tabs::after {
   border-color: #f34639;
 }
 .alertify-notifier .ajs-message.ajs-warning {
+  border-color: #ffc107;
+}
+
+body.dark .alertify-notifier .ajs-message {
+  color: #f3f4f8 !important;
+  background: #2f455a !important;
+}
+body.dark .alertify-notifier .ajs-message.ajs-message {
+  border-color: #2a7cbb;
+}
+body.dark .alertify-notifier .ajs-message.ajs-success {
+  border-color: #198754;
+}
+body.dark .alertify-notifier .ajs-message.ajs-error {
+  border-color: #dc3545;
+}
+body.dark .alertify-notifier .ajs-message.ajs-warning {
   border-color: #ffc107;
 }
 

@@ -8,6 +8,7 @@
     background: $white !important;
     border-style: solid;
     border-width: 2px;
+    box-shadow: $shadow-card;
 
     &.ajs-message {
       border-color: $blue-light;
@@ -23,6 +24,31 @@
 
     &.ajs-warning {
       border-color: #ffc107;
+    }
+  }
+}
+
+body.dark {
+  .alertify-notifier {
+    .ajs-message {
+      color: $white !important;
+      background: $bg-color-dark !important;
+
+      &.ajs-message {
+        border-color: $blue-dark;
+      }
+
+      &.ajs-success {
+        border-color: $green-dark;
+      }
+
+      &.ajs-error {
+        border-color: $red-dark;
+      }
+
+      &.ajs-warning {
+        border-color: #ffc107;
+      }
     }
   }
 }
