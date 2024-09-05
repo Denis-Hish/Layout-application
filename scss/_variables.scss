@@ -1,22 +1,21 @@
-//* light mode
+//* light mode *//
 $text-color-light: #333;
 $blue-light: #37a1f2;
+$red-light: #f34639;
+$green-light: #00aa2b;
 
-//* dark mode
-// $bg-color-dark: #243647;
-// $blue-dark: #2874ad;
+//* dark mode *//
 $bg-color-dark: #2f455a;
 $blue-dark: #2a7cbb;
+$red-dark: #dc3545;
+$green-dark: #198754;
 
-// $white: #f0f3fd;
 $white: #f3f4f8;
 $grey: #999;
-$red: #f34639;
-$green: #00aa2b;
 $border-color: #e1e3e1;
 
-$rounding: 8px;
-$sec: 0.4s; // transition
+$rounding: 8px; //* border-radius *//
+$sec: 0.4s; //* transition *//
 
 $shadow-button: 0 0 5px rgba(0, 0, 0, 0.2);
 $shadow-card: 0 5px 10px rgba(0, 0, 0, 0.1);

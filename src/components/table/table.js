@@ -1,4 +1,4 @@
-export function initialDataTable() {
+export function InitialDataTable() {
   new DataTable('#table', {
     // info: false, // информация в нижнем левом углу
     // ordering: false, // сортировка колонок таблицы

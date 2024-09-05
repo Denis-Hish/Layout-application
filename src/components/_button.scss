@@ -1,40 +1,21 @@
-.buttons-container {
-  position: relative;
-  width: 100%;
-  padding: 20px 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-
-  .button {
-    width: 100%;
-  }
-}
-
-a.button,
-.button {
-  display: block;
-  width: fit-content;
-  padding: 8px 32px;
-  background-color: transparent;
-  border: 2px solid $blue-light;
+.btn {
+  background: transparent;
   color: $text-color-light;
+  border-radius: 50px;
+  border-width: 2px;
+  text-transform: uppercase;
   letter-spacing: 0.75px;
   font-weight: 600;
-  border-radius: 40px;
-  text-transform: uppercase;
   text-wrap: nowrap;
-  transition: background-color $sec, box-shadow $sec, color $sec;
-  cursor: pointer;
+  transition: background-color $sec, box-shadow $sec, color $sec, border $sec;
+  min-width: 150px;
 
   i {
     margin-right: 6px;
-    color: $blue-light;
     transition: $sec;
   }
 
   &:hover {
-    background-color: $blue-light;
     color: $white;
     box-shadow: $shadow-button;
 
@@ -44,25 +25,149 @@ a.button,
   }
 
   &:active {
+    color: $white !important;
     translate: 0 1px;
     box-shadow: none;
+
+    i {
+      color: $white;
+    }
+  }
+
+  &.btn-primary {
+    border-color: $blue-light;
+
+    i {
+      color: $blue-light;
+    }
+
+    &:hover {
+      background-color: $blue-light;
+      border-color: $blue-light;
+
+      i {
+        color: $white;
+      }
+    }
+
+    &:active {
+      background-color: $blue-light !important;
+      border-color: $blue-light !important;
+    }
+  }
+
+  &.btn-success {
+    border-color: $blue-light;
+
+    i {
+      color: $blue-light;
+    }
+
+    &:hover {
+      background-color: $green-light;
+      border-color: $green-light;
+
+      i {
+        color: $white;
+      }
+    }
+
+    &:active {
+      background-color: $green-light !important;
+      border-color: $green-light !important;
+    }
+  }
+
+  &.btn-danger {
+    border-color: $blue-light;
+
+    i {
+      color: $blue-light;
+    }
+
+    &:hover {
+      background-color: $red-light;
+      border-color: $red-light;
+
+      i {
+        color: $white;
+      }
+    }
+
+    &:active {
+      background-color: $red-light !important;
+      border-color: $red-light !important;
+    }
   }
 }
 
 body.dark {
-  a.button,
-  .button {
-    border: 2px solid $blue-dark;
+  .btn {
     color: $white;
-    i {
-      color: $blue-dark;
-    }
-    &:hover {
-      background-color: $blue-dark;
-      color: $white;
+
+    &.btn-primary {
+      border-color: $blue-dark;
 
       i {
-        color: $white;
+        color: $blue-dark;
+      }
+
+      &:hover {
+        background-color: $blue-dark;
+        border-color: $blue-dark;
+
+        i {
+          color: $white;
+        }
+      }
+
+      &:active {
+        background-color: $blue-dark !important;
+        border-color: $blue-dark !important;
+      }
+    }
+
+    &.btn-success {
+      border-color: $blue-dark;
+
+      i {
+        color: $blue-dark;
+      }
+
+      &:hover {
+        background-color: $green-dark;
+        border-color: $green-dark;
+
+        i {
+          color: $white;
+        }
+      }
+
+      &:active {
+        background-color: $green-dark !important;
+        border-color: $green-dark !important;
+      }
+    }
+
+    &.btn-danger {
+      border-color: $blue-dark;
+
+      i {
+        color: $blue-dark;
+      }
+
+      &:hover {
+        background-color: $red-dark;
+        border-color: $red-dark;
+
+        i {
+          color: $white;
+        }
+      }
+
+      &:active {
+        background-color: $red-dark !important;
+        border-color: $red-dark !important;
       }
     }
   }

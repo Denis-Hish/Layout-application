@@ -14,11 +14,14 @@
     position: relative;
     left: calc(100% - $height);
     display: flex;
+    font-weight: 500;
     background: $white;
-    border: 2px solid $blue-light;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $blue-light;
     border-right: none;
     border-radius: 50px 0 0 50px;
-    transition: left $sec, transform $sec, box-shadow $sec;
+    transition: left $sec, transform $sec, box-shadow $sec, border-color $sec;
 
     .icon,
     .title {
@@ -52,17 +55,26 @@
       box-shadow: $shadow-button;
 
       .icon.edit i {
-        color: $green;
+        color: $green-light;
       }
 
       .icon.delete i {
-        color: $red;
+        color: $red-light;
+      }
+
+      &:has(.edit) {
+        border-color: $green-light;
+      }
+
+      &:has(.delete) {
+        border-color: $red-light;
       }
     }
 
     &:active {
-      border: 2px solid lighten($blue-light, 20%);
+      translate: 0 1px;
       border-right: none;
+      box-shadow: none;
     }
   }
 }
@@ -79,9 +91,22 @@ body.dark {
       i {
         color: $blue-dark;
       }
-      &:active {
-        border: 2px solid lighten($blue-light, 20%);
-        border-right: none;
+      &:hover {
+        .icon.edit i {
+          color: $green-dark;
+        }
+
+        .icon.delete i {
+          color: $red-dark;
+        }
+
+        &:has(.edit) {
+          border-color: $green-dark;
+        }
+
+        &:has(.delete) {
+          border-color: $red-dark;
+        }
       }
     }
   }

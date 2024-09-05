@@ -1,7 +1,13 @@
-import { initialDataTable } from '../src/components/table/table.js';
+'use strict';
+
+import { InitialDataTable } from '../src/components/table/table.js';
+import { Allertify } from './allertify.js';
 
 // Initial DataTables
-initialDataTable();
+InitialDataTable();
+
+// Initial allertify
+Allertify();
 
 // add hovered class in selected list item
 const list = document.querySelectorAll('.container-layout .navigation ul li');

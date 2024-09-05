@@ -33,6 +33,7 @@ body {
 
   ::selection {
     background: $blue-dark;
+    color: $white;
   }
 }
 
@@ -66,16 +67,29 @@ select {
   outline: none;
 }
 
+//* GROUP CONTAINER *//
+:root {
+  --min-column-width: 200px; /* default value */
+}
+.group-container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-column-width), 1fr));
+  gap: 1.5rem;
+}
+//* END GROUP CONTAINER *//
+
+.group-container {
+  padding-bottom: 1rem; //! DELETE !//
+}
+
 .container-layout {
   $width-navbar: 300px;
   $width-navbar-active: 70px;
 
   position: relative;
   width: 100%;
-
-  .button {
-    margin: auto; //! DELETE !
-  }
 
   .navigation {
     position: fixed;
@@ -421,12 +435,28 @@ select {
 
     section {
       h2 {
-        padding: 2rem; //! DELETE !
+        padding: 2rem; //! DELETE !//
       }
     }
 
     #table_wrapper {
       margin: 50px 0;
+    }
+  }
+
+  blockquote {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 6px 28px;
+    margin-left: auto;
+    background: $blue-light;
+    color: $white;
+    font-size: 0.875rem;
+    border-radius: $rounding;
+    strong {
+      margin-right: 6px;
+      font-weight: 600;
     }
   }
 }

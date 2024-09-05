@@ -1,0 +1,28 @@
+.alertify-notifier {
+  .ajs-message {
+    color: $text-color-light !important;
+    text-shadow: none !important;
+    font-weight: 500;
+    border: none;
+    border-radius: $rounding;
+    background: $white !important;
+    border-style: solid;
+    border-width: 2px;
+
+    &.ajs-message {
+      border-color: $blue-light;
+    }
+
+    &.ajs-success {
+      border-color: $green-light;
+    }
+
+    &.ajs-error {
+      border-color: $red-light;
+    }
+
+    &.ajs-warning {
+      border-color: #ffc107;
+    }
+  }
+}
