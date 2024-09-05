@@ -1,35 +1,53 @@
 body {
-  .text-light {
+  .text-color {
     color: $text-color-light;
   }
-
-  .text-blue-light {
+  .text-color-blue {
     color: $blue-light;
   }
-
-  .bg-light {
+  .text-color-red {
+    color: $red-light;
+  }
+  .text-color-green {
+    color: $green-light;
+  }
+  .bg-color {
     background: $white;
   }
-
-  .bg-blue-light {
+  .bg-color-blue {
     background: $blue-light;
   }
+  .bg-color-red {
+    background: $red-light;
+  }
+  .bg-color-green {
+    background: $green-light;
+  }
 
-  &:active {
-    .text-dark {
+  &.dark {
+    .text-color {
       color: $white;
     }
-
-    .text-blue-dark {
+    .text-color-blue {
       color: $blue-dark;
     }
-
-    .bg-dark {
+    .text-color-red {
+      color: $red-dark;
+    }
+    .text-color-green {
+      color: $green-dark;
+    }
+    .bg-color {
       background: $bg-color-dark;
     }
-
-    .bg-blue-dark {
+    .bg-color-blue {
       background: $blue-dark;
+    }
+    .bg-color-red {
+      background: $red-dark;
+    }
+    .bg-color-green {
+      background: $green-dark;
     }
   }
 }
