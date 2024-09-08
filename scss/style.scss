@@ -160,6 +160,7 @@ select {
           display: flex;
           text-decoration: none;
           color: $white;
+          transition: none;
 
           .icon {
             position: relative;

@@ -155,6 +155,33 @@
   font-weight: 100;
   font-style: italic;
 }
+:root {
+  --white-color: #f3f4f8;
+  --grey: #999;
+  --border-color: #e1e3e1;
+  --rounding: 8px;
+  --sec: 0.4s;
+  --shadow-button: 0 0 5px rgba(0, 0, 0, 0.2);
+  --shadow-card: 0 5px 10px rgba(0, 0, 0, 0.1);
+  --shadow-card-active: 0 1px 5px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  --text-color: #333;
+  --bg-color: #f3f4f8;
+  --blue-color: #37a1f2;
+  --red-color: #f34639;
+  --green-color: #00aa2b;
+}
+
+body.dark {
+  --text-color: #f3f4f8;
+  --bg-color: #2f455a;
+  --blue-color: #2a7cbb;
+  --red-color: #dc3545;
+  --green-color: #198754;
+}
+
 body.dark {
   background-color: #2f455a;
   color: #f3f4f8;
@@ -513,16 +540,16 @@ body.dark .search input:focus {
   border-left: 13px solid #37a1f2;
 }
 #breadcrumb li:has(a:hover):not(:last-child) {
-  background-color: #5db3f4;
+  background: color-mix(in srgb, var(--blue-color) 80%, transparent);
 }
 #breadcrumb li:has(a:hover):not(:last-child):after {
-  border-left-color: #5db3f4;
+  border-left-color: color-mix(in srgb, var(--blue-color) 80%, transparent);
 }
 #breadcrumb li:has(a:active):not(:last-child) {
-  background-color: #70bcf6;
+  background: color-mix(in srgb, var(--blue-color) 70%, transparent);
 }
 #breadcrumb li:has(a:active):not(:last-child):after {
-  border-left-color: #70bcf6;
+  border-left-color: color-mix(in srgb, var(--blue-color) 70%, transparent);
 }
 #breadcrumb li:has(a:active):not(:last-child) a {
   display: block;
@@ -546,16 +573,16 @@ body.dark #breadcrumb li:not(:last-child):after {
   border-left: 13px solid #2a7cbb;
 }
 body.dark #breadcrumb li:has(a:hover):not(:last-child) {
-  background-color: #4396d5;
+  background-color: color-mix(in srgb, var(--blue-color) 80%, transparent);
 }
 body.dark #breadcrumb li:has(a:hover):not(:last-child):after {
-  border-left-color: #4396d5;
+  border-left-color: color-mix(in srgb, var(--blue-color) 80%, transparent);
 }
 body.dark #breadcrumb li:has(a:active):not(:last-child) {
-  background-color: #41a6f3;
+  background-color: color-mix(in srgb, var(--blue-color) 70%, transparent);
 }
 body.dark #breadcrumb li:has(a:active):not(:last-child):after {
-  border-left-color: #41a6f3;
+  border-left-color: color-mix(in srgb, var(--blue-color) 70%, transparent);
 }
 
 #table_wrapper select,
@@ -1061,6 +1088,7 @@ select {
   display: flex;
   text-decoration: none;
   color: #f3f4f8;
+  transition: none;
 }
 .container-layout .navigation ul li a .icon {
   position: relative;

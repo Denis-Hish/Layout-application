@@ -63,18 +63,30 @@
     }
 
     &:has(a:hover):not(:last-child) {
-      background-color: lighten($blue-light, 8%);
+      // background-color: lighten($blue-light, 8%);
+      background: color-mix(in srgb, var(--blue-color) 80%, transparent);
 
       &:after {
-        border-left-color: lighten($blue-light, 8%);
+        // border-left-color: lighten($blue-light, 8%);
+        border-left-color: color-mix(
+          in srgb,
+          var(--blue-color) 80%,
+          transparent
+        );
       }
     }
 
     &:has(a:active):not(:last-child) {
-      background-color: lighten($blue-light, 12%);
+      // background-color: lighten($blue-light, 12%);
+      background: color-mix(in srgb, var(--blue-color) 70%, transparent);
 
       &:after {
-        border-left-color: lighten($blue-light, 12%);
+        // border-left-color: lighten($blue-light, 12%);
+        border-left-color: color-mix(
+          in srgb,
+          var(--blue-color) 70%,
+          transparent
+        );
       }
     }
 
@@ -110,16 +122,36 @@ body.dark {
         }
       }
       &:has(a:hover):not(:last-child) {
-        background-color: lighten($blue-dark, 10%);
+        // background-color: lighten($blue-dark, 10%);
+        background-color: color-mix(
+          in srgb,
+          var(--blue-color) 80%,
+          transparent
+        );
         &:after {
-          border-left-color: lighten($blue-dark, 10%);
+          // border-left-color: lighten($blue-dark, 10%);
+          border-left-color: color-mix(
+            in srgb,
+            var(--blue-color) 80%,
+            transparent
+          );
         }
       }
       &:has(a:active):not(:last-child) {
-        background-color: lighten($blue-light, 2%);
+        // background-color: lighten($blue-light, 2%);
+        background-color: color-mix(
+          in srgb,
+          var(--blue-color) 70%,
+          transparent
+        );
 
         &:after {
-          border-left-color: lighten($blue-light, 2%);
+          // border-left-color: lighten($blue-light, 2%);
+          border-left-color: color-mix(
+            in srgb,
+            var(--blue-color) 70%,
+            transparent
+          );
         }
       }
     }
