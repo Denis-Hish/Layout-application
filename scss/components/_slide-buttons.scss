@@ -15,13 +15,14 @@
     left: calc(100% - $height);
     display: flex;
     font-weight: 500;
-    background: $white;
+    background: var(--bg-color);
     border-style: solid;
     border-width: 2px;
-    border-color: $blue-light;
+    border-color: var(--blue-color);
     border-right: none;
     border-radius: 50px 0 0 50px;
-    transition: left $sec, transform $sec, box-shadow $sec, border-color $sec;
+    transition: left var(--sec), transform var(--sec), box-shadow var(--sec),
+      border-color var(--sec);
 
     .icon,
     .title {
@@ -40,34 +41,34 @@
       padding: 0 20px 0 10px;
       height: $height;
       white-space: nowrap;
-      color: $text-color-light;
+      color: var(--text-color);
     }
 
     .icon {
       i {
-        color: $blue-light;
-        transition: color $sec;
+        color: var(--blue-color);
+        transition: color var(--sec);
       }
     }
 
     &:hover {
       transform: translateX(calc(-100% + $height));
-      box-shadow: $shadow-button;
+      box-shadow: var(--shadow-button);
 
       .icon.edit i {
-        color: $green-light;
+        color: var(--green-color);
       }
 
       .icon.delete i {
-        color: $red-light;
+        color: var(--red-color);
       }
 
       &:has(.edit) {
-        border-color: $green-light;
+        border-color: var(--green-color);
       }
 
       &:has(.delete) {
-        border-color: $red-light;
+        border-color: var(--red-color);
       }
     }
 
@@ -75,39 +76,6 @@
       translate: 0 1px;
       border-right: none;
       box-shadow: none;
-    }
-  }
-}
-
-body.dark {
-  .slide-buttons {
-    .slide-button {
-      background: $bg-color-dark;
-      border: 2px solid $blue-dark;
-      border-right: none;
-      .title {
-        color: $white;
-      }
-      i {
-        color: $blue-dark;
-      }
-      &:hover {
-        .icon.edit i {
-          color: $green-dark;
-        }
-
-        .icon.delete i {
-          color: $red-dark;
-        }
-
-        &:has(.edit) {
-          border-color: $green-dark;
-        }
-
-        &:has(.delete) {
-          border-color: $red-dark;
-        }
-      }
     }
   }
 }

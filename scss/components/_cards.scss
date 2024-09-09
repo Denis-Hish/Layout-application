@@ -1,27 +1,27 @@
 .card {
   height: 100%;
   border: none;
-  box-shadow: $shadow-card;
-  border-radius: $rounding;
+  box-shadow: var(--shadow-card);
+  border-radius: var(--rounding);
   overflow: hidden;
 
   .card-header,
   .card-footer {
-    background: $blue-light;
-    color: $white;
+    background: var(--blue-color);
+    color: var(--white-color);
     border: none;
   }
 
   .card-body {
-    background: $white;
-    color: $text-color-light;
+    background: var(--bg-color);
+    color: var(--text-color);
     padding: 26px;
 
     a {
       margin-bottom: 16px;
       padding-bottom: 8px;
       border-bottom: 1px solid transparent;
-      transition: border-bottom $sec;
+      transition: border-bottom var(--sec);
 
       display: flex;
       justify-content: space-between;
@@ -37,7 +37,7 @@
       }
 
       &:hover {
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid var(--border-color);
       }
 
       .document-details {
@@ -55,7 +55,7 @@
         }
 
         small {
-          color: $text-color-light;
+          color: var(--text-color);
 
           span {
             margin-left: 6px;
@@ -72,32 +72,7 @@
       display: inline-block;
       width: 100%;
       text-align: center;
-      color: $red-light;
-    }
-  }
-}
-
-body.dark {
-  .card {
-    .card-header,
-    .card-footer {
-      background: $blue-dark;
-      color: $white;
-    }
-
-    .card-body {
-      background: $bg-color-dark;
-      color: $white;
-
-      .document-details {
-        small {
-          color: $white;
-        }
-      }
-
-      .no-data {
-        color: $red-dark;
-      }
+      color: var(--red-color);
     }
   }
 }

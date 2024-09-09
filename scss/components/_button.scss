@@ -1,174 +1,87 @@
 .btn {
   background: transparent;
-  color: $text-color-light;
+  color: var(--text-color);
   border-radius: 50px;
   border-width: 2px;
+  border-color: var(--blue-color);
   text-transform: uppercase;
   letter-spacing: 0.75px;
   font-weight: 600;
   text-wrap: nowrap;
-  transition: background-color $sec, box-shadow $sec, color $sec, border $sec;
+  transition: background-color var(--sec), box-shadow var(--sec),
+    color var(--sec), border var(--sec);
   min-width: 150px;
 
   i {
+    color: var(--blue-color);
     margin-right: 6px;
-    transition: $sec;
+    transition: var(--sec);
   }
 
   &:hover {
-    color: $white;
-    box-shadow: $shadow-button;
+    color: var(--white-color);
+    box-shadow: var(--shadow-button);
 
     i {
-      color: $white;
+      color: var(--white-color);
     }
   }
 
   &:active {
-    color: $white !important;
+    color: var(--white-color) !important;
     translate: 0 1px;
     box-shadow: none;
 
     i {
-      color: $white;
+      color: var(--white-color);
     }
   }
 
   &.btn-primary {
-    border-color: $blue-light;
-
-    i {
-      color: $blue-light;
-    }
-
     &:hover {
-      background-color: $blue-light;
-      border-color: $blue-light;
+      background-color: var(--blue-color);
+      border-color: var(--blue-color);
 
       i {
-        color: $white;
+        color: var(--white-color);
       }
     }
 
     &:active {
-      background-color: $blue-light !important;
-      border-color: $blue-light !important;
+      background-color: var(--blue-color) !important;
+      border-color: var(--blue-color) !important;
     }
   }
 
   &.btn-success {
-    border-color: $blue-light;
-
-    i {
-      color: $blue-light;
-    }
-
     &:hover {
-      background-color: $green-light;
-      border-color: $green-light;
+      background-color: var(--green-color);
+      border-color: var(--green-color);
 
       i {
-        color: $white;
+        color: var(--white-color);
       }
     }
 
     &:active {
-      background-color: $green-light !important;
-      border-color: $green-light !important;
+      background-color: var(--green-color) !important;
+      border-color: var(--green-color) !important;
     }
   }
 
   &.btn-danger {
-    border-color: $blue-light;
-
-    i {
-      color: $blue-light;
-    }
-
     &:hover {
-      background-color: $red-light;
-      border-color: $red-light;
+      background-color: var(--red-color);
+      border-color: var(--red-color);
 
       i {
-        color: $white;
+        color: var(--white-color);
       }
     }
 
     &:active {
-      background-color: $red-light !important;
-      border-color: $red-light !important;
-    }
-  }
-}
-
-body.dark {
-  .btn {
-    color: $white;
-
-    &.btn-primary {
-      border-color: $blue-dark;
-
-      i {
-        color: $blue-dark;
-      }
-
-      &:hover {
-        background-color: $blue-dark;
-        border-color: $blue-dark;
-
-        i {
-          color: $white;
-        }
-      }
-
-      &:active {
-        background-color: $blue-dark !important;
-        border-color: $blue-dark !important;
-      }
-    }
-
-    &.btn-success {
-      border-color: $blue-dark;
-
-      i {
-        color: $blue-dark;
-      }
-
-      &:hover {
-        background-color: $green-dark;
-        border-color: $green-dark;
-
-        i {
-          color: $white;
-        }
-      }
-
-      &:active {
-        background-color: $green-dark !important;
-        border-color: $green-dark !important;
-      }
-    }
-
-    &.btn-danger {
-      border-color: $blue-dark;
-
-      i {
-        color: $blue-dark;
-      }
-
-      &:hover {
-        background-color: $red-dark;
-        border-color: $red-dark;
-
-        i {
-          color: $white;
-        }
-      }
-
-      &:active {
-        background-color: $red-dark !important;
-        border-color: $red-dark !important;
-      }
+      background-color: var(--red-color) !important;
+      border-color: var(--red-color) !important;
     }
   }
 }

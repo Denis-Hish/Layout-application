@@ -12,35 +12,50 @@ body {
     sans-serif;
   min-height: 100dvh;
   overflow-x: hidden;
-  background-color: $white;
-  color: $text-color-light;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 
   &::-webkit-scrollbar {
     width: 8px; /* ширина всей полосы прокрутки */
   }
 
   &::-webkit-scrollbar-track {
-    background: $white; /* цвет зоны отслеживания */
+    background: var(--bg-color); /* цвет зоны отслеживания */
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $blue-light; /* цвет бегунка */
+    background-color: var(--blue-color); /* цвет бегунка */
     border-radius: 50px; /* округлось бегунка */
     // border: 2px solid orange; /* отступ вокруг бегунка */
   }
 
-  caret-color: $blue-dark; /* цвет курсора */
+  caret-color: var(--blue-color-inverted); /* цвет курсора */
 
   ::selection {
-    background: $blue-dark;
-    color: $white;
+    background: var(--blue-color-inverted);
+    color: var(--white-color);
+  }
+
+  &.dark {
+    .navigation {
+      ul {
+        li {
+          &:hover,
+          &.hovered {
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 a {
   text-decoration: none;
-  color: $blue-light;
-  transition: color $sec;
+  color: var(--blue-color);
+  transition: color var(--sec);
 
   &:hover {
     color: darken($blue-light, 10%);
@@ -68,10 +83,8 @@ select {
 }
 
 //* GROUP CONTAINER *//
-:root {
-  --min-column-width: 200px; /* default value */
-}
 .group-container {
+  --min-column-width: 100px; /* default value */
   position: relative;
   width: 100%;
   display: grid;
@@ -95,9 +108,9 @@ select {
     position: fixed;
     width: $width-navbar;
     height: 100%;
-    background: $blue-light;
-    border-left: 10px solid $blue-light;
-    transition: $sec;
+    background: var(--blue-color);
+    border-left: 10px solid var(--blue-color);
+    transition: var(--sec);
     overflow: hidden;
 
     .logo {
@@ -117,14 +130,14 @@ select {
 
         i {
           font-size: 3rem;
-          color: $white;
+          color: var(--white-color);
         }
       }
 
       .title,
       .subtitle {
         white-space: nowrap;
-        color: $white;
+        color: var(--white-color);
       }
 
       .title {
@@ -159,7 +172,7 @@ select {
           width: 100%;
           display: flex;
           text-decoration: none;
-          color: $white;
+          color: var(--white-color);
           transition: none;
 
           .icon {
@@ -188,10 +201,10 @@ select {
 
         &:hover,
         &.hovered {
-          background: $white;
+          background: var(--bg-color);
 
           a {
-            color: $blue-light;
+            color: var(--blue-color);
 
             //* curve outside *//
             &::before,
@@ -208,12 +221,12 @@ select {
 
             &::before {
               top: -50px;
-              box-shadow: 35px 35px 0 10px $white;
+              box-shadow: 35px 35px 0 10px var(--bg-color);
             }
 
             &::after {
               bottom: -50px;
-              box-shadow: 35px -35px 0 10px $white;
+              box-shadow: 35px -35px 0 10px var(--bg-color);
             }
           }
         }
@@ -259,7 +272,7 @@ select {
           }
 
           &:hover {
-            border: 1px solid $border-color;
+            border: 1px solid var(--border-color);
           }
 
           &:active {
@@ -272,7 +285,7 @@ select {
         display: flex;
         align-items: center;
         padding: 0 10px;
-        color: $white;
+        color: var(--white-color);
         cursor: pointer;
         border: 1px solid transparent;
         border-radius: 50px;
@@ -282,7 +295,7 @@ select {
         }
 
         &:hover {
-          border: 1px solid $border-color;
+          border: 1px solid var(--border-color);
         }
 
         &:active {
@@ -301,7 +314,7 @@ select {
 
         i {
           font-size: 1.25em;
-          color: $white;
+          color: var(--white-color);
         }
       }
     }
@@ -344,7 +357,7 @@ select {
     width: calc(100% - $width-navbar);
     left: $width-navbar;
     min-height: 100dvh;
-    transition: $sec;
+    transition: var(--sec);
 
     .topbar {
       width: 100%;
@@ -355,12 +368,12 @@ select {
       padding: 0 10px;
 
       // box-shadow: $shadow-card;
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid var(--border-color);
       margin-bottom: 1rem;
       position: sticky;
       top: 0;
       left: 0;
-      background: $white;
+      background: var(--bg-color);
       z-index: 2;
 
       .toggle,
@@ -425,7 +438,7 @@ select {
         transform: translateX(-50%);
         width: 50%;
         height: 1px;
-        background-color: $border-color;
+        background-color: var(--border-color);
       }
     }
 
@@ -451,10 +464,10 @@ select {
     width: fit-content;
     padding: 6px 28px;
     margin-left: auto;
-    background: $blue-light;
-    color: $white;
+    background: var(--blue-color);
+    color: var(--white-color);
     font-size: 0.875rem;
-    border-radius: $rounding;
+    border-radius: var(--rounding);
     strong {
       margin-right: 6px;
       font-weight: 600;

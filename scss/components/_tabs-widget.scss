@@ -2,8 +2,8 @@
   padding: 1rem;
   margin: 2rem auto;
   border-radius: 10px;
-  background-color: $white;
-  box-shadow: $shadow-card;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow-card);
 
   p {
     margin-bottom: 0;
@@ -21,7 +21,7 @@
     isolation: isolate;
     display: flex;
     height: 3.5rem;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid var(--border-color);
 
     input {
       display: none;
@@ -36,15 +36,15 @@
       font-weight: 600;
       color: lighten($text-color-light, 30%);
       cursor: pointer;
-      transition: color $sec ease-in-out;
+      transition: color var(--sec) ease-in-out;
 
       &:hover {
-        color: $text-color-light;
+        color: var(--text-color);
       }
     }
 
     input:checked + label {
-      color: $text-color-light;
+      color: var(--text-color);
     }
 
     &::after {
@@ -53,8 +53,8 @@
       position: absolute;
       inset: 0 0 -1px;
       width: calc((100% / var(--tab-count)) + 1px);
-      border-radius: $rounding $rounding 0 0;
-      border: 1px solid $border-color;
+      border-radius: var(--rounding) var(--rounding) 0 0;
+      border: 1px solid var(--border-color);
       border-bottom: none;
       background-image: linear-gradient(lighten($white, 2%), $white);
       z-index: -1;
@@ -64,7 +64,7 @@
 				3rd = 2 * 100% = 200%
 			*/
       translate: calc(var(--active) * 100%);
-      transition: translate $sec ease-in-out;
+      transition: translate var(--sec) ease-in-out;
     }
 
     &:has(:checked:nth-of-type(1)) {
@@ -126,7 +126,6 @@
 
 body.dark {
   .tabs-widget {
-    background-color: $bg-color-dark;
     .tabs {
       label {
         color: darken($white, 30%);
@@ -138,7 +137,6 @@ body.dark {
         color: $white;
       }
       &::after {
-        border: 1px solid $border-color;
         background-image: linear-gradient(
           darken($bg-color-dark, 2%),
           $bg-color-dark

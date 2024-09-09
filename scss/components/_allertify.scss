@@ -1,54 +1,29 @@
 .alertify-notifier {
   .ajs-message {
-    color: $text-color-light !important;
+    color: var(--text-color) !important;
     text-shadow: none !important;
     font-weight: 500;
     border: none;
-    border-radius: $rounding;
-    background: $white !important;
+    border-radius: var(--rounding);
+    background: var(--bg-color) !important;
     border-style: solid;
     border-width: 2px;
-    box-shadow: $shadow-card;
+    box-shadow: var(--shadow-card);
 
     &.ajs-message {
-      border-color: $blue-light;
+      border-color: var(--blue-color);
     }
 
     &.ajs-success {
-      border-color: $green-light;
+      border-color: var(--green-color);
     }
 
     &.ajs-error {
-      border-color: $red-light;
+      border-color: var(--red-color);
     }
 
     &.ajs-warning {
-      border-color: #ffc107;
-    }
-  }
-}
-
-body.dark {
-  .alertify-notifier {
-    .ajs-message {
-      color: $white !important;
-      background: $bg-color-dark !important;
-
-      &.ajs-message {
-        border-color: $blue-dark;
-      }
-
-      &.ajs-success {
-        border-color: $green-dark;
-      }
-
-      &.ajs-error {
-        border-color: $red-dark;
-      }
-
-      &.ajs-warning {
-        border-color: #ffc107;
-      }
+      border-color: var(--yellow-color);
     }
   }
 }
