@@ -1,0 +1,48 @@
+.text-color {
+  color: var(--text-color);
+}
+.bg-color {
+  background-color: var(--bg-color);
+}
+.text-blue {
+  color: var(--blue-color);
+}
+.bg-blue {
+  background: var(--blue-color);
+}
+.text-blue-inverted {
+  color: var(blue-color-inverted);
+}
+.bg-blue-inverted {
+  background: var(blue-color-inverted);
+}
+.text-white {
+  color: var(--white-color);
+}
+.bg-white {
+  background: var(--white-color);
+}
+.text-yellow {
+  color: var(--yellow-color);
+}
+.bg-yellow {
+  background: var(--yellow-color);
+}
+.text-grey {
+  color: var(--grey-color);
+}
+.bg-grey {
+  background: var(--grey-color);
+}
+.text-red {
+  color: var(red-color);
+}
+.bg-red {
+  background: var(red-color);
+}
+.text-green {
+  color: var(--green-color);
+}
+.bg-green {
+  background: var(--green-color);
+}
