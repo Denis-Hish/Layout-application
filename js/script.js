@@ -2,6 +2,7 @@
 
 import { InitialDataTable } from './table.js';
 import { Allertify } from './allertify.js';
+import { Autocomplete } from './autocomplete-input.js';
 
 // Initial DataTables
 InitialDataTable();
@@ -76,6 +77,40 @@ if (savedTheme) {
     localStorage.setItem('theme', 'light');
   }
 }
+// ------------------------------------------------------------ //
+
+// Autocomplete input
+import { data } from './data.js';
+
+new Autocomplete('#autocomplete', {
+  search: input => {
+    // Возвращаем Promise, который резолвит список найденных данных
+    return new Promise(resolve => {
+      if (input.length < 3) {
+        return resolve([]);
+      }
+
+      // Фильтруем данные по совпадению строки
+      const results = data.filter(item =>
+        item.title.toLowerCase().includes(input.toLowerCase())
+      );
+
+      // Возвращаем отфильтрованный список
+      resolve(results);
+    });
+  },
+
+  // Возвращаем заголовок из найденного объекта
+  getResultValue: result => result.title,
+
+  // Обработка нажатия на выбранный результат
+  onSubmit: result => {
+    // window.location.href = `https://www.google.com/`; // в текущем окне
+    window.open('https://www.google.com/', '_blank'); // в новом окне
+    console.log(`Selected: ${result.title}`);
+  },
+});
+
 // ------------------------------------------------------------ //
 
 //! Prevention of link behavior when pressing (!!! DELETE THIS !!!)

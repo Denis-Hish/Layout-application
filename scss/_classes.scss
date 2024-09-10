@@ -11,10 +11,10 @@
   background: var(--blue-color);
 }
 .text-blue-inverted {
-  color: var(blue-color-inverted);
+  color: var(--blue-color-inverted);
 }
 .bg-blue-inverted {
-  background: var(blue-color-inverted);
+  background: var(--blue-color-inverted);
 }
 .text-white {
   color: var(--white-color);
@@ -35,10 +35,10 @@
   background: var(--grey-color);
 }
 .text-red {
-  color: var(red-color);
+  color: var(--red-color);
 }
 .bg-red {
-  background: var(red-color);
+  background: var(--red-color);
 }
 .text-green {
   color: var(--green-color);
