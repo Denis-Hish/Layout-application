@@ -2,4 +2,3 @@
 - Add Toasts
 - Modal windows
 - Close button
-- в тёмной теме видно светлые полосы в углах карточки
