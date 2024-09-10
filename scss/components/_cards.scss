@@ -1,6 +1,7 @@
 .card {
   height: 100%;
   border: none;
+  background: var(--bg-color);
   box-shadow: var(--shadow-card);
   border-radius: var(--rounding);
   overflow: hidden;
