@@ -46,3 +46,19 @@
 .bg-green {
   background: var(--green-color);
 }
+.fancy-scroll {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+    border-radius: 50px;
+  }
+}

@@ -80,37 +80,93 @@ if (savedTheme) {
 // ------------------------------------------------------------ //
 
 // Autocomplete input
-import { data } from './data.js';
+// import { data } from './data.js';
+
+// new Autocomplete('#autocomplete', {
+//   search: input => {
+//     // Возвращаем Promise, который резолвит список найденных данных
+//     return new Promise(resolve => {
+//       if (input.length < 3) {
+//         return resolve([]);
+//       }
+
+//       // Фильтруем данные по совпадению строки
+//       const results = data.filter(item =>
+//         item.title.toLowerCase().includes(input.toLowerCase())
+//       );
+
+//       // Возвращаем отфильтрованный список
+//       resolve(results);
+//     });
+//   },
+
+//   // Возвращаем заголовок из найденного объекта
+//   getResultValue: result => result.title,
+
+//   // Обработка нажатия на выбранный результат
+//   onSubmit: result => {
+//     // window.location.href = `https://www.google.com/`; // в текущем окне
+//     window.open('https://www.google.com/', '_blank'); // в новом окне
+//     console.log(`Selected: ${result.title}`);
+//   },
+// });
+
+/* Wikipedia */
+const wikiUrl = 'https://en.wikipedia.org';
+const params = 'action=query&list=search&format=json&origin=*';
 
 new Autocomplete('#autocomplete', {
+  // Search function can return a promise
+  // which resolves with an array of
+  // results. In this case we're using
+  // the Wikipedia search API.
   search: input => {
-    // Возвращаем Promise, который резолвит список найденных данных
+    const url = `${wikiUrl}/w/api.php?${params}&srsearch=${encodeURI(input)}`;
+
     return new Promise(resolve => {
       if (input.length < 3) {
         return resolve([]);
       }
 
-      // Фильтруем данные по совпадению строки
-      const results = data.filter(item =>
-        item.title.toLowerCase().includes(input.toLowerCase())
-      );
-
-      // Возвращаем отфильтрованный список
-      resolve(results);
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          resolve(data.query.search);
+        });
     });
   },
 
-  // Возвращаем заголовок из найденного объекта
+  // Control the rendering of result items.
+  // Let's show the title and snippet
+  // from the Wikipedia results
+  renderResult: (result, props) => `
+    <li ${props}>
+      <div class="title">
+        ${result.title}
+      </div>
+      <div class="snippet">
+        ${result.snippet}
+      </div>
+    </li>
+  `,
+
+  // Wikipedia returns a format like this:
+  //
+  // {
+  //   pageid: 12345,
+  //   title: 'Article title',
+  //   ...
+  // }
+  //
+  // We want to display the title
   getResultValue: result => result.title,
 
-  // Обработка нажатия на выбранный результат
+  // Open the selected article in
+  // a new window
   onSubmit: result => {
-    // window.location.href = `https://www.google.com/`; // в текущем окне
-    window.open('https://www.google.com/', '_blank'); // в новом окне
-    console.log(`Selected: ${result.title}`);
+    window.open(`${wikiUrl}/wiki/${encodeURI(result.title)}`);
   },
 });
-
 // ------------------------------------------------------------ //
 
 //! Prevention of link behavior when pressing (!!! DELETE THIS !!!)
