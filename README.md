@@ -50,13 +50,13 @@ To add a new Tab you need to:
 style="--tab-count: 4" - Quantity tabs
 
 1. Add a tab to HTML:
-   `<input type="radio" name="tabs" id="first-tab">`
-   `<label for="first-tab">Tab text</label>`
+   &lt;input type="radio" name="tabs" id="first-tab"&gt;
+   &lt;label for="first-tab">Tab text</label&gt;
    Write the next in order (in text, not numbers!) ID for input and FOR for label (ID and FOR must be the same).
 2. Add content for a tab in HTML:
-   `<div class="tabs-content">`
-   `<div class="tab-content-1">Content</div>`
-   `</div>`
+   &lt;div class="tabs-content"&gt;
+   &lt;div class="tab-content-1">Content</div&gt;
+   &lt;/div&gt;
    You need to specify the next digit ("tab-content-1") in the tab order.
 3. In the file "tabs-widget.scss" need to add the following label
    &:has(:checked:nth-of-type(1)) {
