@@ -2,6 +2,9 @@
 
 ### Custom CSS styles
 
+- .fancy-scroll - Custom vertical scroll
+- .group-container (Needs to be added variable: style="--min-column-width: 00px;") 00 - minimum column width
+
 #### Colors text
 
 | Class               | Light mode | Dark mode |
@@ -27,9 +30,6 @@
 | .bg-grey          | #999       | #999      |
 | .bg-red           | #f34639    | #dc3545   |
 | .bg-green         | #00aa2b    | #198754   |
-
-- .fancy-scroll - Custom vertical scroll
-- .group-container (Needs to be added variable: style="--min-column-width: 00px;") 00 - minimum column width
 
 ---
 
@@ -76,3 +76,5 @@ You need to specify the next digit ("tab-content-1") in the tab order.
    and
    &:has(:checked:nth-of-type(1)) .tab-content-1,
    111
+
+---
