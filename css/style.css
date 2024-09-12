@@ -265,6 +265,15 @@ body.dark {
   border-radius: 50px;
 }
 
+.group-container {
+  --min-column-width: 100px; /* default value */
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-column-width), 1fr));
+  gap: 1.5rem;
+}
+
 .btn {
   background: transparent;
   color: var(--text-color);
@@ -732,6 +741,9 @@ body.dark #breadcrumb li:has(a:active):not(:last-child):after {
 .tabs-widget .tabs:has(:checked:nth-of-type(3)) {
   --active: 2;
 }
+.tabs-widget .tabs:has(:checked:nth-of-type(4)) {
+  --active: 3;
+}
 .tabs-widget .tabs-content {
   padding: 1rem;
 }
@@ -745,7 +757,7 @@ body.dark #breadcrumb li:has(a:active):not(:last-child):after {
   opacity: 0;
   visibility: hidden;
 }
-.tabs-widget:has(:checked:nth-of-type(1)) .tab-content-1, .tabs-widget:has(:checked:nth-of-type(2)) .tab-content-2, .tabs-widget:has(:checked:nth-of-type(3)) .tab-content-3 {
+.tabs-widget:has(:checked:nth-of-type(1)) .tab-content-1, .tabs-widget:has(:checked:nth-of-type(2)) .tab-content-2, .tabs-widget:has(:checked:nth-of-type(3)) .tab-content-3, .tabs-widget:has(:checked:nth-of-type(4)) .tab-content-4 {
   display: block;
   opacity: 1;
 }
@@ -969,26 +981,24 @@ h4,
 h5,
 h6 {
   font-family: "Lora", serif;
+  color: var(--text-color);
   text-transform: uppercase;
   text-align: center;
+  text-wrap: balance;
 }
 
 li {
   list-style: none;
 }
 
+li,
+p {
+  text-wrap: pretty;
+}
+
 input,
 select {
   outline: none;
-}
-
-.group-container {
-  --min-column-width: 100px; /* default value */
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--min-column-width), 1fr));
-  gap: 1.5rem;
 }
 
 .group-container {

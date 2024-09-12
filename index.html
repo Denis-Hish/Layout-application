@@ -158,8 +158,10 @@
 					</div>
 
 					<p class="text-center mt-5">without container</p>
-					<button type="button" class="btn btn-primary"><i class="fa-brands fa-bootstrap"></i>Bootstrap
+
+					<button type="button" class="btn btn-primary test"><i class="fa-brands fa-bootstrap"></i>Bootstrap
 						button</button>
+
 					<a href="#" class="btn btn-primary"><i class="fa-brands fa-bootstrap"></i>Bootstrap link</a>
 					<button type="button" class="btn btn-success" id="allerty-success"><i
 							class="fa-solid fa-pen-to-square"></i>Edit</button>
@@ -753,8 +755,8 @@
 
 					<!--! For the active tab add the attribute "checked" !-->
 					<div class="tabs-widget">
-						<div class="tabs">
-							<input type="radio" name="tabs" id="first-tab" checked>
+						<div class="tabs" style="--tab-count: 4">
+							<input type="radio" name="tabs" id="first-tab">
 							<label for="first-tab">HTML</label>
 
 							<input type="radio" name="tabs" id="second-tab">
@@ -762,6 +764,9 @@
 
 							<input type="radio" name="tabs" id="third-tab">
 							<label for="third-tab">JavaScript</label>
+
+							<input type="radio" name="tabs" id="fourth-tab" checked>
+							<label for="fourth-tab">Informacje</label>
 						</div>
 
 						<div class="tabs-content">
@@ -795,10 +800,20 @@
 									alongside HTML
 									and CSS. 99% of websites use JavaScript on the client side for webpage behavior.</p>
 							</div>
+
+							<div class="tab-content-4">
+								<h2>Podstawowe informacje</h2>
+								<p>test</p>
+							</div>
 						</div>
 					</div>
 
 				</div>
+
+				<!-- ALLETRIFY MESSAGES -->
+				<!-- <div class="allerty" type-allerty="error">Error message</div> -->
+				<!-- <div class="allerty" type-allerty="success">Success message</div> -->
+
 			</section>
 
 			<footer class="footer">

@@ -69,29 +69,25 @@ h4,
 h5,
 h6 {
   font-family: 'Lora', serif;
+  color: var(--text-color);
   text-transform: uppercase;
   text-align: center;
+  text-wrap: balance;
 }
 
 li {
   list-style: none;
 }
 
+li,
+p {
+  text-wrap: pretty;
+}
+
 input,
 select {
   outline: none;
 }
-
-//* GROUP CONTAINER *//
-.group-container {
-  --min-column-width: 100px; /* default value */
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--min-column-width), 1fr));
-  gap: 1.5rem;
-}
-//* END GROUP CONTAINER *//
 
 .group-container {
   padding-bottom: 1rem; //! DELETE !//
