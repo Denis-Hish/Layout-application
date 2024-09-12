@@ -72,9 +72,15 @@ Write the next in order (in text, not numbers!) ID for input and FOR for label (
 You need to specify the next digit ("tab-content-1") in the tab order.
 
 3. In the file "tabs-widget.scss" need to add the following label
-   &:has(:checked:nth-of-type(1)) { --active: 0; }
-   and
-   &:has(:checked:nth-of-type(1)) .tab-content-1,
-   111
+
+```css
+&:has(:checked:nth-of-type(1)) {
+  // +1
+  --active: 0; // +1
+}
+&:has(:checked:nth-of-type(1)) .tab-content-1 {
+  // +1
+}
+```
 
 ---
