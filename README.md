@@ -82,3 +82,42 @@ You need to specify the next digit ("tab-content-1") in the tab order.
 ```
 
 ---
+
+### Allertify messages
+
+To show Allertify message, you need to call the showAllerty() function, by specifying the function parameters: message, type and time. If they do not specify them, the default parameters will be used:
+
+- message = 'Allertify message'
+- type = 'error'
+- time = 5 (seconds)
+
+Types of messages:
+
+- success - green
+- error - red
+- message - blue
+- warning - yellow
+
+```js
+function showAllerty(message = 'Allertify message', type = 'error', time = 5) {
+  alertify.notify(message, type, time);
+}
+```
+
+To call the showAllerty() function from HTML, the code below must be in the same HTML file.
+
+How to call the showAllerty() function using parameters using the button example:
+
+```html
+<button
+  type="button"
+  class="btn btn-primary"
+  onclick="showAllerty('Allertify message', 'success')"
+>
+  Show allerti
+</button>
+```
+
+Here the message and type are specified, the time remains at default (5 second)
+
+---
