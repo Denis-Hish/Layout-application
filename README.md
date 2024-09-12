@@ -49,7 +49,7 @@ Tab component structure:
 To add a new Tab you need to:
 style="--tab-count: 4" - Quantity tabs
 
-1. //\*Add a tab to HTML:
+1. Add a tab to HTML:
    &lt;input type="radio" name="tabs" id="first-tab"&gt;
    `<label for="first-tab">Tab text</label>`
    Write the next in order (in text, not numbers!) ID for input and FOR for label (ID and FOR must be the same).
@@ -67,3 +67,4 @@ You need to specify the next digit ("tab-content-1") in the tab order.
    &:has(:checked:nth-of-type(1)) { --active: 0; }
    and
    &:has(:checked:nth-of-type(1)) .tab-content-1,
+   111
