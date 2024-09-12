@@ -265,7 +265,7 @@ body.dark {
   border-radius: 50px;
 }
 
-.group-container {
+.grid-container {
   --min-column-width: 100px; /* default value */
   position: relative;
   width: 100%;
@@ -1001,7 +1001,7 @@ select {
   outline: none;
 }
 
-.group-container {
+.grid-container {
   padding-bottom: 1rem;
 }
 

@@ -159,7 +159,7 @@
 
 					<p class="text-center mt-5">without container</p>
 
-					<button type="button" class="btn btn-primary test"><i class="fa-brands fa-bootstrap"></i>Bootstrap
+					<button type="button" class="btn btn-primary"><i class="fa-brands fa-bootstrap"></i>Bootstrap
 						button</button>
 
 					<a href="#" class="btn btn-primary"><i class="fa-brands fa-bootstrap"></i>Bootstrap link</a>
@@ -194,7 +194,7 @@
 					<p class="text-center mt-5">Group container</p>
 
 					<!--! Set the minimum column width in px !-->
-					<div class="group-container" style="--min-column-width: 200px;">
+					<div class="grid-container" style="--min-column-width: 200px;">
 						<button class="btn btn-primary"><i class="fa-solid fa-folder-open"></i>Umowy</button>
 						<button class="btn btn-primary"><i class="fa-solid fa-envelope"></i>Pisma</button>
 						<button class="btn btn-primary"><i class="fa-solid fa-hotel"></i>Rejestr likali</button>
@@ -811,7 +811,11 @@
 				</div>
 
 				<!-- ALLETRIFY MESSAGES -->
-				<!-- <div class="allerty" type-allerty="error">Error message</div> -->
+				<button type="button" class="btn btn-primary d-block m-auto"
+					onclick="showAllerty('Allertify message', 'success')">Show
+					allerti</button>
+
+				<div class="allerty d-none" type-allerty=""></div>
 				<!-- <div class="allerty" type-allerty="success">Success message</div> -->
 
 			</section>
@@ -825,6 +829,11 @@
 
 	</div>
 
+	<script>
+		function showAllerty(message = 'Allertify message', type = 'error', time = 5) {
+			alertify.notify(message, type, time);
+		}
+	</script>
 
 </body>
 

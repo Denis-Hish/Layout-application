@@ -1,14 +1,14 @@
 'use strict';
 
 import { InitialDataTable } from './table.js';
-import { Allertify } from './allertify.js';
+// import { Allertify } from './allertify.js';
 import { Autocomplete } from './autocomplete-input.js';
 
 // Initial DataTables
 InitialDataTable();
 
 // Initial allertify
-Allertify();
+// Allertify();
 
 // add hovered class in selected list item
 const list = document.querySelectorAll('.container-layout .navigation ul li');

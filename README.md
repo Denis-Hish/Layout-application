@@ -3,7 +3,7 @@
 ### Custom CSS styles
 
 - .fancy-scroll - Custom vertical scroll
-- .group-container (Needs to be added variable: style="--min-column-width: 00px;") 00 - minimum column width
+- .grid-container (Needs to be added variable: style="--min-column-width: 00px;") 00 - minimum column width
 
 #### Colors text
 
