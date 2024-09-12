@@ -75,11 +75,9 @@ You need to specify the next digit ("tab-content-1") in the tab order.
 
 ```css
 &:has(:checked:nth-of-type(1)) {
-  // +1
-  --active: 0; // +1
+  --active: 0;
 }
 &:has(:checked:nth-of-type(1)) .tab-content-1 {
-  // +1
 }
 ```
 
