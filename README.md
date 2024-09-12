@@ -98,13 +98,13 @@ Types of messages:
 - message - blue
 - warning - yellow
 
+To call the showAllerty() function from HTML, the code below must be in the same HTML file.
+
 ```js
 function showAllerty(message = 'Allertify message', type = 'error', time = 5) {
   alertify.notify(message, type, time);
 }
 ```
-
-To call the showAllerty() function from HTML, the code below must be in the same HTML file.
 
 How to call the showAllerty() function using parameters using the button example:
 
