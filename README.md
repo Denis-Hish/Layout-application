@@ -35,24 +35,32 @@
 
 ### Tabs widget
 
-Tab component structure:
+- Tab component structure:
 
+```html
 <div class="tabs" style="--tab-count: 4">
-	<input type="radio" name="tabs" id="first-tab">
-	<label for="first-tab">Tab text</label>
+  <input type="radio" name="tabs" id="first-tab" />
+  <label for="first-tab">Tab text</label>
 </div>
 
 <div class="tabs-content">
-	<div class="tab-content-1">Content</div>
+  <div class="tab-content-1">Content</div>
 </div>
+```
 
-To add a new Tab you need to:
 style="--tab-count: 4" - Quantity tabs
 
+- To add a new Tab you need:
+
 1. Add a tab to HTML:
-   &lt;input type="radio" name="tabs" id="first-tab"&gt;
-   `<label for="first-tab">Tab text</label>`
-   Write the next in order (in text, not numbers!) ID for input and FOR for label (ID and FOR must be the same).
+
+```html
+<input type="radio" name="tabs" id="first-tab" />
+<label for="first-tab">Tab text</label>
+```
+
+Write the next in order (in text, not numbers!) ID for input and FOR for label (ID and FOR must be the same).
+
 2. Add content for a tab in HTML:
 
 ```html
