@@ -973,7 +973,6 @@ body.dark .autocomplete[data-loading=true]:after {
   border-radius: 50px;
   color: var(--white-color);
   background: var(--blue-color);
-  box-shadow: var(--shadow-button);
   transition: var(--sec);
 }
 .back-to-top i {
@@ -985,9 +984,11 @@ body.dark .autocomplete[data-loading=true]:after {
 .back-to-top:hover {
   background: #5db3f4;
   color: var(--white-color);
+  box-shadow: var(--shadow-button);
 }
 .back-to-top:active {
   translate: 0 1px;
+  box-shadow: none;
 }
 
 body.dark .back-to-top:hover {

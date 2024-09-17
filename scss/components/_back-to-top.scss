@@ -9,7 +9,6 @@
   border-radius: 50px;
   color: var(--white-color);
   background: var(--blue-color);
-  box-shadow: var(--shadow-button);
   transition: var(--sec);
 
   i {
@@ -22,10 +21,12 @@
   &:hover {
     background: lighten($blue-light, 8%);
     color: var(--white-color);
+    box-shadow: var(--shadow-button);
   }
 
   &:active {
     translate: 0 1px;
+    box-shadow: none;
   }
 }
 
