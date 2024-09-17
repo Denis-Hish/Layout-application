@@ -169,10 +169,24 @@ new Autocomplete('#autocomplete', {
 });
 // ------------------------------------------------------------ //
 
-//! Prevention of link behavior when pressing (!!! DELETE THIS !!!)
-document.querySelectorAll('a[href="#"]').forEach(link => {
-  link.addEventListener('click', function (event) {
-    event.preventDefault();
+// Back to top
+document.addEventListener('DOMContentLoaded', function () {
+  const backToTopBtn = document.querySelector('.back-to-top');
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 300) {
+      backToTopBtn.style.display = 'block';
+    } else {
+      backToTopBtn.style.display = 'none';
+    }
   });
 });
+// ------------------------------------------------------------ //
+
+//! Prevention of link behavior when pressing (!!! DELETE THIS !!!)
+// document.querySelectorAll('a[href="#"]').forEach(link => {
+//   link.addEventListener('click', function (event) {
+//     event.preventDefault();
+//   });
+// });
 // ------------------------------------------------------------ //
