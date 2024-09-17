@@ -803,18 +803,51 @@ body.dark .tabs-widget .tabs::after {
   border-style: solid;
   border-width: 2px;
   box-shadow: var(--shadow-card);
+  position: relative;
+  text-align: start;
+}
+.alertify-notifier .ajs-message::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: left;
+  margin-right: 6px;
 }
 .alertify-notifier .ajs-message.ajs-message {
   border-color: var(--blue-color);
 }
+.alertify-notifier .ajs-message.ajs-message::before {
+  background-image: url("../../img/message-light.svg");
+}
 .alertify-notifier .ajs-message.ajs-success {
   border-color: var(--green-color);
+}
+.alertify-notifier .ajs-message.ajs-success::before {
+  background-image: url("../../img/success-light.svg");
 }
 .alertify-notifier .ajs-message.ajs-error {
   border-color: var(--red-color);
 }
+.alertify-notifier .ajs-message.ajs-error::before {
+  background-image: url("../../img/error-light.svg");
+}
 .alertify-notifier .ajs-message.ajs-warning {
   border-color: var(--yellow-color);
+}
+.alertify-notifier .ajs-message.ajs-warning::before {
+  background-image: url("../../img/warning.svg");
+}
+
+body.dark .alertify-notifier.ajs-message::before {
+  background-image: url("../../img/message-dark.svg");
+}
+body.dark .alertify-notifier.ajs-success::before {
+  background-image: url("../../img/success-dark.svg");
+}
+body.dark .alertify-notifier .ajs-message.ajs-error::before {
+  background-image: url("../../img/error-dark.svg");
 }
 
 #autocomplete {
