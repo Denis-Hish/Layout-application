@@ -180,13 +180,18 @@ document.addEventListener('DOMContentLoaded', function () {
       backToTopBtn.style.display = 'none';
     }
   });
+
+  backToTopBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });
 // ------------------------------------------------------------ //
 
 //! Prevention of link behavior when pressing (!!! DELETE THIS !!!)
-// document.querySelectorAll('a[href="#"]').forEach(link => {
-//   link.addEventListener('click', function (event) {
-//     event.preventDefault();
-//   });
-// });
+document.querySelectorAll('a[href="#"]').forEach(link => {
+  link.addEventListener('click', function (event) {
+    event.preventDefault();
+  });
+});
 // ------------------------------------------------------------ //
