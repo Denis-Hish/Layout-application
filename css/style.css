@@ -1386,4 +1386,16 @@ select {
 }
 .container-layout .navigation.active hr.hr {
   margin-right: 10px;
+}
+
+.navigation,
+.main {
+  transition: none;
+  opacity: 0;
+}
+
+.navigation.loaded,
+.main.loaded {
+  transition: var(--sec);
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

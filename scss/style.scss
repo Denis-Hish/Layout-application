@@ -498,3 +498,17 @@ select {
     }
   }
 }
+
+//* -------------------------------------------- *//
+
+.navigation,
+.main {
+  transition: none;
+  opacity: 0;
+}
+
+.navigation.loaded,
+.main.loaded {
+  transition: var(--sec);
+  opacity: 1;
+}

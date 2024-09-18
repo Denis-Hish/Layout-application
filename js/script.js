@@ -42,6 +42,12 @@ if (savedState === 'true') {
   navigation.classList.add('active');
   main.classList.add('active');
 }
+
+setTimeout(() => {
+  navigation.classList.add('loaded');
+  main.classList.add('loaded');
+}, 1);
+
 // ------------------------------------------------------------ //
 
 // toggle dark light mode
