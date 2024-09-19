@@ -25,28 +25,28 @@
     &.ajs-message {
       border-color: var(--blue-color);
       &::before {
-        background-image: url('../../img/message-light.svg');
+        background-image: url('../img/message-light.svg');
       }
     }
 
     &.ajs-success {
       border-color: var(--green-color);
       &::before {
-        background-image: url('../../img/success-light.svg');
+        background-image: url('../img/success-light.svg');
       }
     }
 
     &.ajs-error {
       border-color: var(--red-color);
       &::before {
-        background-image: url('../../img/error-light.svg');
+        background-image: url('../img/error-light.svg');
       }
     }
 
     &.ajs-warning {
       border-color: var(--yellow-color);
       &::before {
-        background-image: url('../../img/warning.svg');
+        background-image: url('../img/warning.svg');
       }
     }
   }
@@ -56,18 +56,18 @@ body.dark {
   .alertify-notifier {
     &.ajs-message {
       &::before {
-        background-image: url('../../img/message-dark.svg');
+        background-image: url('../img/message-dark.svg');
       }
     }
     &.ajs-success {
       &::before {
-        background-image: url('../../img/success-dark.svg');
+        background-image: url('../img/success-dark.svg');
       }
     }
     .ajs-message {
       &.ajs-error {
         &::before {
-          background-image: url('../../img/error-dark.svg');
+          background-image: url('../img/error-dark.svg');
         }
       }
     }
