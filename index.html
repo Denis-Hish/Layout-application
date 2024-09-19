@@ -164,13 +164,15 @@
 						button</button>
 
 					<a href="#" class="btn btn-primary"><i class="fa-brands fa-bootstrap"></i>Bootstrap link</a>
-					<button type="button" class="btn btn-success" id="allerty-success"><i
+					<button type="button" class="btn btn-success" onclick="showAllerty('Edited success', 'success')"><i
 							class="fa-solid fa-pen-to-square"></i>Edit</button>
-					<button type="button" class="btn btn-danger" id="allerty-error"><i
+					<button type="button" class="btn btn-danger" onclick="showAllerty('Oops. We deleted something!', 'error')"><i
 							class="fa-solid fa-trash"></i>Delete</button>
-					<button type="button" class="btn btn-primary" id="allerty-message"><i class="fa-solid fa-message"></i>Show
+					<button type="button" class="btn btn-primary" onclick="showAllerty(`I'm message Allertify JS`, 'message')"><i
+							class="fa-solid fa-message"></i>Show
 						message</button>
-					<button type="button" class="btn btn-primary" id="allerty-warning"><i
+					<button type="button" class="btn btn-primary"
+						onclick="showAllerty('Warning! Button is clicked!', 'warning')"><i
 							class="fa-solid fa-circle-exclamation"></i>Warning</button>
 
 					<p class="text-center mt-5" style="color: #f34639;">Buttons container. Bootstrap ROW/COL</p>
@@ -825,7 +827,7 @@
 
 	</div>
 
-	<a href="#" class="back-to-top" title="Back to top"><i class="fa-solid fa-angle-up"></i></a>
+	<button class="back-to-top" title="Back to top"><i class="fa-solid fa-angle-up"></i></>
 
 </body>
 
