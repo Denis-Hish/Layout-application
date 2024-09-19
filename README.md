@@ -98,7 +98,9 @@ Types of messages:
 - message - blue
 - warning - yellow
 
-To call the showAllerty() function from HTML, the code below must be in the same HTML file.
+To call the showAllerty() function from HTML, the code below must be in the same HTML file if the \*.js file is included in the HTML as type="module".
+
+If the \*.js file is included in the HTML without type="module", the showAllerty() function code can be in a separate \*.js file.
 
 ```js
 function showAllerty(message = 'Allertify message', type = 'error', time = 5) {

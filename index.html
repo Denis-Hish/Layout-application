@@ -17,6 +17,7 @@
 	<!-- ALLERTIFY -->
 	<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css" />
+	<script defer src="js/allertify.js"></script>
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css" />
 	<!-- BASIC STYLES -->
 	<link rel="stylesheet" href="css/style.css">
@@ -262,8 +263,6 @@
 							</div>
 						</div>
 					</div>
-
-
 
 					<table id="table" class="data-table table table-striped table-hover">
 						<thead>
@@ -815,9 +814,6 @@
 					onclick="showAllerty('Allertify message', 'success')">Show
 					allerti</button>
 
-				<div class="allerty d-none" type-allerty=""></div>
-				<!-- <div class="allerty" type-allerty="success">Success message</div> -->
-
 			</section>
 
 			<footer class="footer">
@@ -830,12 +826,6 @@
 	</div>
 
 	<a href="#" class="back-to-top" title="Back to top"><i class="fa-solid fa-angle-up"></i></a>
-
-	<script>
-		function showAllerty(message = 'Allertify message', type = 'error', time = 5) {
-			alertify.notify(message, type, time);
-		}
-	</script>
 
 </body>
 
