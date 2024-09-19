@@ -1075,6 +1075,11 @@ select {
   position: relative;
   width: 100%;
 }
+.container-layout .navigation.loading,
+.container-layout .main.loading {
+  transition: none;
+  opacity: 0;
+}
 .container-layout .navigation {
   position: fixed;
   width: 300px;
@@ -1082,6 +1087,7 @@ select {
   background: var(--blue-color);
   border-left: 10px solid var(--blue-color);
   transition: var(--sec);
+  opacity: 1;
   overflow: hidden;
 }
 .container-layout .navigation .logo {
@@ -1273,6 +1279,7 @@ select {
   left: 300px;
   min-height: 100dvh;
   transition: var(--sec);
+  opacity: 1;
 }
 .container-layout .main .topbar {
   width: 100%;
