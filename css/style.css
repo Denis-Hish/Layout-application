@@ -477,14 +477,22 @@ body.dark {
   border-left: 13px solid var(--bg-color);
   border-bottom: 13px solid transparent;
 }
-#breadcrumb li:first-child {
-  border-radius: 13px 0 0 13px;
-}
 #breadcrumb li:last-child {
   border-radius: 0 13px 13px 0;
 }
 #breadcrumb li:last-child a {
   cursor: default;
+}
+#breadcrumb li:first-child {
+  border-radius: 13px 0 0 13px;
+}
+#breadcrumb li:first-child:after {
+  z-index: 1;
+  right: -13px;
+  bottom: 0;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 13px solid var(--blue-color);
 }
 #breadcrumb li:not(:last-child) {
   padding-right: 13px;

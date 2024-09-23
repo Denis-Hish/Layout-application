@@ -37,15 +37,24 @@
       }
     }
 
-    &:first-child {
-      border-radius: $half 0 0 $half;
-    }
-
     &:last-child {
       border-radius: 0 $half $half 0;
 
       a {
         cursor: default;
+      }
+    }
+
+    &:first-child {
+      border-radius: $half 0 0 $half;
+
+      &:after {
+        z-index: 1;
+        right: -$half;
+        bottom: 0;
+        border-top: $half solid transparent;
+        border-bottom: $half solid transparent;
+        border-left: $half solid var(--blue-color);
       }
     }
 
