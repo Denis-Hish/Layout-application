@@ -100,6 +100,12 @@ select {
   position: relative;
   width: 100%;
 
+  .navigation.loading,
+  .main.loading {
+    transition: none;
+    opacity: 0;
+  }
+
   .navigation {
     position: fixed;
     width: $width-navbar;
@@ -107,6 +113,7 @@ select {
     background: var(--blue-color);
     border-left: 10px solid var(--blue-color);
     transition: var(--sec);
+    opacity: 1;
     overflow: hidden;
 
     .logo {
@@ -354,6 +361,7 @@ select {
     left: $width-navbar;
     min-height: 100dvh;
     transition: var(--sec);
+    opacity: 1;
 
     .topbar {
       width: 100%;

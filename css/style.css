@@ -827,35 +827,35 @@ body.dark .tabs-widget .tabs::after {
   border-color: var(--blue-color);
 }
 .alertify-notifier .ajs-message.ajs-message::before {
-  background-image: url("../../img/message-light.svg");
+  background-image: url("../img/message-light.svg");
 }
 .alertify-notifier .ajs-message.ajs-success {
   border-color: var(--green-color);
 }
 .alertify-notifier .ajs-message.ajs-success::before {
-  background-image: url("../../img/success-light.svg");
+  background-image: url("../img/success-light.svg");
 }
 .alertify-notifier .ajs-message.ajs-error {
   border-color: var(--red-color);
 }
 .alertify-notifier .ajs-message.ajs-error::before {
-  background-image: url("../../img/error-light.svg");
+  background-image: url("../img/error-light.svg");
 }
 .alertify-notifier .ajs-message.ajs-warning {
   border-color: var(--yellow-color);
 }
 .alertify-notifier .ajs-message.ajs-warning::before {
-  background-image: url("../../img/warning.svg");
+  background-image: url("../img/warning.svg");
 }
 
 body.dark .alertify-notifier.ajs-message::before {
-  background-image: url("../../img/message-dark.svg");
+  background-image: url("../img/message-dark.svg");
 }
 body.dark .alertify-notifier.ajs-success::before {
-  background-image: url("../../img/success-dark.svg");
+  background-image: url("../img/success-dark.svg");
 }
 body.dark .alertify-notifier .ajs-message.ajs-error::before {
-  background-image: url("../../img/error-dark.svg");
+  background-image: url("../img/error-dark.svg");
 }
 
 #autocomplete {
@@ -979,6 +979,8 @@ body.dark .autocomplete[data-loading=true]:after {
   width: 46px;
   height: 46px;
   border-radius: 50px;
+  border: none;
+  outline: none;
   color: var(--white-color);
   background: var(--blue-color);
   transition: var(--sec);
@@ -1083,6 +1085,11 @@ select {
   position: relative;
   width: 100%;
 }
+.container-layout .navigation.loading,
+.container-layout .main.loading {
+  transition: none;
+  opacity: 0;
+}
 .container-layout .navigation {
   position: fixed;
   width: 300px;
@@ -1090,6 +1097,7 @@ select {
   background: var(--blue-color);
   border-left: 10px solid var(--blue-color);
   transition: var(--sec);
+  opacity: 1;
   overflow: hidden;
 }
 .container-layout .navigation .logo {
@@ -1281,6 +1289,7 @@ select {
   left: 300px;
   min-height: 100dvh;
   transition: var(--sec);
+  opacity: 1;
 }
 .container-layout .main .topbar {
   width: 100%;

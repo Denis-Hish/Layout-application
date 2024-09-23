@@ -44,9 +44,9 @@ if (savedState === 'true') {
 }
 
 setTimeout(() => {
-  navigation.classList.add('loaded');
-  main.classList.add('loaded');
-}, 1);
+  navigation.classList.remove('loading');
+  main.classList.remove('loading');
+}, 0);
 
 // ------------------------------------------------------------ //
 
