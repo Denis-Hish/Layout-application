@@ -1,0 +1,33 @@
+.pulsed {
+  --size-pulsed-circle: 250px; // 250px
+  --color-pulsed-circle: #bbb; // #bbb
+  --animation-duration: 0.4s; // 0.4s
+
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  & .pulsed-span {
+    position: absolute;
+    background: var(--color-pulsed-circle);
+    width: var(--size-pulsed-circle);
+    height: var(--size-pulsed-circle);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulsed var(--animation-duration) linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes pulsed {
+    from {
+      width: 0;
+      height: 0;
+      opacity: 0.25;
+    }
+    to {
+      width: var(--size-pulsed-circle);
+      height: var(--size-pulsed-circle);
+      opacity: 0;
+    }
+  }
+}

@@ -97,12 +97,12 @@
 				</li>
 			</ul>
 			<div class="nav-bottom-icons">
-				<div class="dark-light-mode-icon">
+				<span class="dark-light-mode-icon pulsed">
 					<span class="icon light-icon show"><i class="fa-solid fa-sun"></i></span>
 					<span class="icon dark-icon"><i class="fa-solid fa-moon"></i></span>
-				</div>
+				</span>
 
-				<span class="log-out">
+				<span class="log-out pulsed">
 					<span class="log-out-text">Wyloguj</span>
 					<span class="icon log-out-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
 				</span>
@@ -137,12 +137,12 @@
 			<section>
 				<div class="slide-buttons">
 
-					<a href="#" class="slide-button">
+					<a href="#" class="slide-button pulsed">
 						<span class="icon edit"><i class="fa-solid fa-pen-to-square"></i></span>
 						<span class="title">Edytuj</span>
 					</a>
 
-					<a href="#" class="slide-button">
+					<a href="#" class="slide-button pulsed">
 						<span class="icon delete"><i class="fa-solid fa-trash"></i></span>
 						<span class="title">Usuń</span>
 					</a>
@@ -160,37 +160,38 @@
 
 					<p class="text-center mt-5">without container</p>
 
-					<button type="button" class="btn btn-primary"><i class="fa-brands fa-bootstrap"></i>Bootstrap
+					<button type="button" class="btn btn-primary pulsed"><i class="fa-brands fa-bootstrap"></i>Bootstrap
 						button</button>
 
-					<a href="#" class="btn btn-primary"><i class="fa-brands fa-bootstrap"></i>Bootstrap link</a>
-					<button type="button" class="btn btn-success" onclick="showAllerty('Edited success', 'success')"><i
+					<a href="#" class="btn btn-primary pulsed"><i class="fa-brands fa-bootstrap"></i>Bootstrap link</a>
+					<button type="button" class="btn btn-success pulsed" onclick="showAllerty('Edited success', 'success')"><i
 							class="fa-solid fa-pen-to-square"></i>Edit</button>
-					<button type="button" class="btn btn-danger" onclick="showAllerty('Oops. We deleted something!', 'error')"><i
+					<button type="button" class="btn btn-danger pulsed"
+						onclick="showAllerty('Oops. We deleted something!', 'error')"><i
 							class="fa-solid fa-trash"></i>Delete</button>
-					<button type="button" class="btn btn-primary" onclick="showAllerty(`I'm message Allertify JS`, 'message')"><i
-							class="fa-solid fa-message"></i>Show
+					<button type="button" class="btn btn-primary pulsed"
+						onclick="showAllerty(`I'm message Allertify JS`, 'message')"><i class="fa-solid fa-message"></i>Show
 						message</button>
-					<button type="button" class="btn btn-primary"
+					<button type="button" class="btn btn-primary pulsed"
 						onclick="showAllerty('Warning! Button is clicked!', 'warning')"><i
 							class="fa-solid fa-circle-exclamation"></i>Warning</button>
 
 					<p class="text-center mt-5" style="color: #f34639;">Buttons container. Bootstrap ROW/COL</p>
 					<div class="row">
 						<div class="col mb-2">
-							<button class="btn btn-primary"><i class="fa-solid fa-folder-open"></i>Umowy</button>
+							<button class="btn btn-primary pulsed"><i class="fa-solid fa-folder-open"></i>Umowy</button>
 						</div>
 						<div class="col mb-4">
-							<button class="btn btn-primary"><i class="fa-solid fa-envelope"></i>Pisma</button>
+							<button class="btn btn-primary pulsed"><i class="fa-solid fa-envelope"></i>Pisma</button>
 						</div>
 						<div class="col mb-4">
-							<button class="btn btn-primary"><i class="fa-solid fa-hotel"></i>Rejestr likali</button>
+							<button class="btn btn-primary pulsed"><i class="fa-solid fa-hotel"></i>Rejestr likali</button>
 						</div>
 						<div class="col mb-4">
-							<button class="btn btn-primary"><i class="fa-solid fa-users"></i>Zarząd</button>
+							<button class="btn btn-primary pulsed"><i class="fa-solid fa-users"></i>Zarząd</button>
 						</div>
 						<div class="col mb-4">
-							<button class="btn btn-primary"><i class="fa-solid fa-folder-tree"></i>Segregatory</button>
+							<button class="btn btn-primary pulsed"><i class="fa-solid fa-folder-tree"></i>Segregatory</button>
 						</div>
 					</div>
 
@@ -198,16 +199,16 @@
 
 					<!--! Set the minimum column width in px !-->
 					<div class="grid-container" style="--min-column-width: 200px;">
-						<button class="btn btn-primary"><i class="fa-solid fa-folder-open"></i>Umowy</button>
-						<button class="btn btn-primary"><i class="fa-solid fa-envelope"></i>Pisma</button>
-						<button class="btn btn-primary"><i class="fa-solid fa-hotel"></i>Rejestr likali</button>
-						<button class="btn btn-primary"><i class="fa-solid fa-users"></i>Zarząd</button>
-						<button class="btn btn-primary"><i class="fa-solid fa-folder-tree"></i>Segregatory</button>
+						<button class="btn btn-primary pulsed"><i class="fa-solid fa-folder-open"></i>Umowy</button>
+						<button class="btn btn-primary pulsed"><i class="fa-solid fa-envelope"></i>Pisma</button>
+						<button class="btn btn-primary pulsed"><i class="fa-solid fa-hotel"></i>Rejestr likali</button>
+						<button class="btn btn-primary pulsed"><i class="fa-solid fa-users"></i>Zarząd</button>
+						<button class="btn btn-primary pulsed"><i class="fa-solid fa-folder-tree"></i>Segregatory</button>
 					</div>
 
 					<div class="row g-3">
 						<div class="col-12 col-xl-6">
-							<div class="card">
+							<div class="card pulsed">
 								<h6 class="card-header">Najnowsze dokumenty</h6>
 								<div class="card-body">
 									<!--! data: true = data | data: false = span ! -->
@@ -827,7 +828,7 @@
 
 	</div>
 
-	<button class="back-to-top" title="Back to top"><i class="fa-solid fa-angle-up"></i></>
+	<button class="back-to-top" title="Back to top"><i class="fa-solid fa-angle-up"></i></button>
 
 </body>
 

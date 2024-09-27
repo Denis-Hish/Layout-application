@@ -25,6 +25,13 @@
       height: 0;
     }
 
+    &:before {
+      z-index: 1;
+    }
+    &:after {
+      z-index: 2;
+    }
+
     & + li {
       margin-left: 2px;
 
@@ -49,7 +56,6 @@
       border-radius: $half 0 0 $half;
 
       &:after {
-        z-index: 1;
         right: -$half;
         bottom: 0;
         border-top: $half solid transparent;
@@ -62,7 +68,6 @@
       padding-right: $half;
 
       &:after {
-        z-index: 1;
         right: -$half;
         bottom: 0;
         border-top: $half solid transparent;

@@ -194,6 +194,33 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // ------------------------------------------------------------ //
 
+// Pulsed button effect
+const pulsedBtn = document.querySelectorAll('.pulsed');
+
+pulsedBtn.forEach(btn => {
+  btn.addEventListener('click', e => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const pulsed = document.createElement('span');
+    pulsed.className = 'pulsed-span';
+
+    pulsed.style.left = x + 'px';
+    pulsed.style.top = y + 'px';
+    btn.appendChild(pulsed);
+
+    // Getting the duration of animation from CSS
+    const animationDuration = getComputedStyle(pulsed).animationDuration;
+    const animationTime = parseFloat(animationDuration) * 1000;
+
+    setTimeout(() => {
+      pulsed.remove();
+    }, animationTime);
+  });
+});
+
+// ------------------------------------------------------------ //
+
 //! Prevention of link behavior when pressing (!!! DELETE THIS !!!)
 document.querySelectorAll('a[href="#"]').forEach(link => {
   link.addEventListener('click', function (event) {
